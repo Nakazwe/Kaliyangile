@@ -30,13 +30,13 @@ console.log(scoreQuiz(["A", "B", "C"], ["A", "B", "D"]));
 console.log(scoreQuiz(["A", "B", "C"], ["A", "B", "C"]));
 // expect 33
 console.log(scoreQuiz([null, "B", "C"], ["A", "B", "D"]));
-
+//expected error: Quiz must contain at least one question
 try {
   console.log(scoreQuiz([], []));
 } catch (error) {
   console.error(error.message);
 }
-
+// expected error: Student answers and answer key must have the same length
 try {
   console.log(scoreQuiz(["A", "B"], ["A", "B", "C"]));
 } catch (error) {
